@@ -17,16 +17,17 @@ function changeTheme(event) {
             document.body.classList.remove("light-mode");
             document.body.classList.add("dark-mode");
 
-            r.style.setProperty("--background", "black");
-            r.style.setProperty("--text", "white");
+            r.style.setProperty("--background", "#0D0D0D");
+            r.style.setProperty("--text", "#F2F2F2");          
         }
         else
         {
             document.body.classList.remove("dark-mode");
             document.body.classList.add("light-mode");
 
-            r.style.setProperty("--background", "white");
-            r.style.setProperty("--text", "black");
+            r.style.setProperty("--background", "#F2F2F2");
+            r.style.setProperty("--text", "#0D0D0D");
+            
         }
     }
 }

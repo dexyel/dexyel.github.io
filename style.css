@@ -1,7 +1,7 @@
 :root {
-    --background: white;
-    --text: black;
-    --dark-color: #000;
+    --background: #F2F2F2;
+    --text: #0D0D0D;
+    --dark-color: #0D0D0D;
 }
 
 html, body {
@@ -124,35 +124,37 @@ p {
     right: 10%;
     transform: translateY(-50%);
     font-size: 1.5rem;
-    line-height: 2;
+    line-height: 2;    
 }
 
 ul {
     display: flex;
     flex-direction: column;
     align-items: start;
-    list-style-type: none;
+    list-style-type: none;    
 }
 
 a {
     position: relative;
       display: block;
-      color: var(--text);
+      color: var(--background);
       text-decoration: none;
       transition: 0.5s;
+      pointer-events: none;
+      animation: fadeInRight 2s ease-in 10s forwards;
 }
 
 a::after {
     position: absolute;
-        content: "";
-        top: 90%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        background: #6b6b6b;
-        transform: scaleX(0);
-        transform-origin: right;
-        transition: transform 0.5s;
+    content: "";
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--text), var(--background));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
 }
 
 a:hover {
@@ -188,4 +190,11 @@ a:hover::after {
       opacity: 1;
       transform: translateX(0.5rem);
     }
-  }
+}
+
+@keyframes fadeInRight {
+    to {
+      color: var(--text);
+      pointer-events: all;
+    }
+}
