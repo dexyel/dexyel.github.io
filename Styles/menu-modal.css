@@ -11,7 +11,7 @@
 }
 
 .wrapper-open {
-    clip-path: circle(84% at calc(100% - 2.7rem) 2.8rem);
+    clip-path: circle(94% at calc(100% - 2.7rem) 2.8rem);
 }
 
 .wrapper-background {
@@ -27,11 +27,7 @@
 }
 
 .wrapper-background-open {
-    clip-path: circle(80% at calc(100% - 2.7rem) 2.8rem);
-}
-
-.wrapper-background-close {
-    clip-path: circle(0 at calc(100% - 2.7rem) 2.8rem);
+    clip-path: circle(90% at calc(100% - 2.7rem) 2.8rem);
 }
 
 .menu-modal {
