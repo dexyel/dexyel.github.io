@@ -97,8 +97,6 @@ function closeWrapper() {
 }
 
 function setThemeColors() {
-    
-
     if (document.body.classList.contains("light-mode"))
     {
         blueButton.style.color = blueTheme[0];
