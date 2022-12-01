@@ -1,0 +1,23 @@
+:root {
+    --background: #F2F2F2;
+    --text: #0D0D0D;
+    --theme: #2477db;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cutive Mono', monospace;
+    background: var(--background);
+    overflow: auto;
+    transition: 0.5s background ease;
+}
+
+#active {
+    display: none;
+}

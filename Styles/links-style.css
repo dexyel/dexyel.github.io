@@ -1,0 +1,17 @@
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:not(.project-list a)::before {
+    content: "</";
+}
+
+a:not(.project-list a)::after {
+    content: ">";
+}
+
+a:hover::before,
+a:hover::after {
+    color: var(--theme);
+}
