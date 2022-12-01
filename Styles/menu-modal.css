@@ -7,14 +7,16 @@
     background-color: var(--theme);
     clip-path: circle(0 at calc(100% - 2.7rem) 2.8rem);
     transition: clip-path 0.5s ease-in-out;
-    z-index: 50;    
+    z-index: 50;   
 }
 
 .wrapper-open {
-    clip-path: circle(94% at calc(100% - 2.7rem) 2.8rem);
+    clip-path: circle(65% at calc(100% - 2.7rem) 2.8rem);
 }
 
 .wrapper-background {
+    display: flex;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,33 +25,43 @@
     background-color: var(--background);
     clip-path: circle(0 at calc(100% - 2.7rem) 2.8rem);
     transition: clip-path 0.5s ease-in-out;
-    z-index: 51;
+    z-index: 5;
 }
 
 .wrapper-background-open {
-    clip-path: circle(90% at calc(100% - 2.7rem) 2.8rem);
+    clip-path: circle(60% at calc(100% - 2.7rem) 2.8rem);
 }
 
-.menu-modal {
+.menu-list {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
+    right: 2%;   
 }
 
-.menu-modal ul {
-    position: relative;
-    top: 30%;
-    left: 70%;
-}
-
-.menu-modal li {
+.menu-list li {
     margin-bottom: 1.5rem;
-}
-
-.menu-modal a {
     font-size: 3rem;
 }
 
+.theme-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 1.4rem;
+    left: 80%;
+    width: 15%;
+    font-size: 2rem;
+}
+
+.fa-circle {
+    cursor: pointer;
+    border: solid 4px var(--background);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+.fa-circle:hover {    
+    border-style: solid;
+    border-width: 4px;
+    border-color: inherit;
+}
