@@ -16,12 +16,12 @@ header {
     font-size: 2rem;
     color: var(--text);
     padding: 4px;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 .fa-circle-half-stroke {
     border: solid 4px transparent;
-    border-radius: 50%;      
+    border-radius: 50%;
     box-sizing: border-box;
 }
 

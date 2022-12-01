@@ -17,21 +17,18 @@
     top: 50%;
     right: 10%;
     transform: translate(130%, -50%);
-
     z-index: -10;
-
     width: 1000px;
     opacity: 0;
     filter: saturate(0.5) blur(3px);
     pointer-events: none;
-
     transition: all 1s ease;
 }
 
 .project-list a,
 .project-list a::before,
 .project-list a::after {
-    color: var(--text);    
+    color: var(--text);
     opacity: 0;
     pointer-events: none;
     animation: fadeIn 2s ease-in 6s forwards;

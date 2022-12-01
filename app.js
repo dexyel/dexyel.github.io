@@ -55,7 +55,7 @@ function switchDarkMode(event) {
             document.body.classList.add("light-mode");
 
             r.style.setProperty("--background", mainColors[0]);
-            r.style.setProperty("--text", mainColors[1]);           
+            r.style.setProperty("--text", mainColors[1]);
         }
 
         updateColor();
@@ -64,21 +64,19 @@ function switchDarkMode(event) {
     setThemeColors();
 }
 
-function openWrapper() {  
-    if (!isOpened) 
+function openWrapper() {
+    if (!isOpened)
     {
-    wrapper.addEventListener("transitionend", openWrapperBackground);     
-    wrapper.classList.add("wrapper-open");    
+        wrapper.addEventListener("transitionend", openWrapperBackground);
+        wrapper.classList.add("wrapper-open");
     }
 
     isOpened = true;
-    
 }
 
 function openWrapperBackground() {
-    wrapper.removeEventListener("transitionend", openWrapperBackground);  
+    wrapper.removeEventListener("transitionend", openWrapperBackground);
     wrapperBackground.classList.add("wrapper-background-open");
-    console.log(isOpened);
 }
 
 function closeWrapperBackground() {
@@ -86,12 +84,12 @@ function closeWrapperBackground() {
     {
         wrapperBackground.addEventListener("transitionend", closeWrapper);
         wrapperBackground.classList.remove("wrapper-background-open");
-    }    
+    }
 }
 
-function closeWrapper() {    
+function closeWrapper() {
     wrapperBackground.removeEventListener("transitionend", closeWrapper);
-    wrapper.classList.remove("wrapper-open");    
+    wrapper.classList.remove("wrapper-open");
 
     isOpened = false;
 }
@@ -110,7 +108,7 @@ function setThemeColors() {
         greenButton.style.color = greenTheme[1];
         orangeButton.style.color = orangeTheme[1];
         purpleButton.style.color = purpleTheme[1];
-    }    
+    }
 }
 
 function switchBlue(event) {
@@ -167,11 +165,11 @@ function switchPurple(event) {
 
 function updateColor() {
     if (document.body.classList.contains("light-mode"))
-        {
-            r.style.setProperty("--theme", activeTheme[0]);
-        }
-        else
-        {      
-            r.style.setProperty("--theme", activeTheme[1]);            
-        }
+    {
+        r.style.setProperty("--theme", activeTheme[0]);
+    }
+    else
+    {
+        r.style.setProperty("--theme", activeTheme[1]);
+    }
 }
