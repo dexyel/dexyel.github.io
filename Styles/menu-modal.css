@@ -24,7 +24,7 @@
     height: 100%;
     background-color: var(--background);
     clip-path: circle(0 at calc(100% - 2.7rem) 2.8rem);
-    transition: clip-path 0.5s ease-in-out;
+    transition: all 0.5s ease;
     z-index: 5;
 }
 
@@ -34,12 +34,14 @@
 
 .menu-list {
     position: fixed;
+    top: 33%;
     right: 2%;
 }
 
 .menu-list li {
     margin-bottom: 1.5rem;
     font-size: 3rem;
+    cursor: pointer;
 }
 
 .theme-buttons {
@@ -64,4 +66,12 @@
     border-style: solid;
     border-width: 4px;
     border-color: inherit;
+}
+
+.wrapper-page {
+    clip-path: circle(150% at calc(100% - 2.7rem) 2.8rem);
+}
+
+.wrapper-background-page {
+    clip-path: circle(125% at calc(100% - 2.7rem) 2.8rem);
 }

@@ -3,15 +3,23 @@ a {
     color: var(--text);
 }
 
-a:not(.project-list a)::before {
+a:not(.project-list a)::before,
+#aboutMe::before,
+#contact::before {
     content: "</";
 }
 
-a:not(.project-list a)::after {
+a:not(.project-list a)::after,
+#aboutMe::after,
+#contact::after {
     content: ">";
 }
 
 a:hover::before,
-a:hover::after {
+a:hover::after,
+#aboutMe:hover::before,
+#aboutMe:hover::after,
+#contact:hover::before,
+#contact:hover::after {
     color: var(--theme);
 }

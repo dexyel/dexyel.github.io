@@ -7,6 +7,10 @@ const blueButton = document.querySelector("#blueButton");
 const greenButton = document.querySelector("#greenButton");
 const orangeButton = document.querySelector("#orangeButton");
 const purpleButton = document.querySelector("#purpleButton");
+const aboutMeButton = document.querySelector("#aboutMe");
+const contactButton = document.querySelector("#contact");
+const aboutMe = document.querySelector(".about-me");
+const contact = document.querySelector(".contact");
 
 const mainColors = ["#F2F2F2","#0D0D0D"];
 const blueTheme = ["#3084F2", "#599DF5"];
@@ -16,6 +20,7 @@ const purpleTheme = ["#C966F2", "#D485F5"];
 
 let activeTheme = blueTheme;
 let isOpened = false;
+let pageMode = false;
 
 document.addEventListener("DOMContentLoaded", setThemeColors);
 themeButton.addEventListener("click", switchDarkMode);
@@ -23,6 +28,9 @@ blueButton.addEventListener("click", switchBlue);
 greenButton.addEventListener("click", switchGreen);
 orangeButton.addEventListener("click", switchOrange);
 purpleButton.addEventListener("click", switchPurple);
+aboutMeButton.addEventListener("click", openPage);
+contactButton.addEventListener("click", openPage);
+
 checkbox.addEventListener("change", () => {
     
     if (checkbox.checked && !isOpened)
@@ -30,6 +38,11 @@ checkbox.addEventListener("change", () => {
         openWrapper();
     }
     else {
+        if (pageMode)
+        {
+            closePage();
+        }
+
         closeWrapperBackground();
     }
 });
@@ -172,4 +185,46 @@ function updateColor() {
     {
         r.style.setProperty("--theme", activeTheme[1]);
     }
+}
+
+function openPage(event) {
+    event.preventDefault();
+    
+    var button = event.target;
+
+    if (button.id === "contact" || button.id === "aboutMe")
+    {
+        wrapper.addEventListener("transitionend", wrapperBackgroundPage);
+        wrapper.classList.add("wrapper-page");  
+        
+        function wrapperBackgroundPage() {
+            wrapper.removeEventListener("transitionend", wrapperBackgroundPage);
+            wrapperBackground.classList.add("wrapper-background-page");
+            pageMode = true;
+        }
+
+        if (button.id === "contact")
+        {
+            console.log("contact");
+            contact.style.display = "flex";
+            aboutMe.style.display = "none";
+        }
+
+        if (button.id === "aboutMe")
+        {
+            console.log("contact");
+            contact.style.display = "none";
+            aboutMe.style.display = "block";
+        }        
+    }    
+}
+
+function openAbout() {
+    return;
+}
+
+function closePage() {
+    wrapperBackground.classList.remove("wrapper-background-page");
+    wrapper.classList.remove("wrapper-page");
+    pageMode = false;
 }
