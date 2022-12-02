@@ -21,6 +21,7 @@ const purpleTheme = ["#C966F2", "#D485F5"];
 let activeTheme = blueTheme;
 let isOpened = false;
 let pageMode = false;
+let pageType = "";
 
 document.addEventListener("DOMContentLoaded", setThemeColors);
 themeButton.addEventListener("click", switchDarkMode);
@@ -192,31 +193,37 @@ function openPage(event) {
     
     var button = event.target;
 
-    if (button.id === "contact" || button.id === "aboutMe")
+    if (!pageMode)
     {
-        wrapper.addEventListener("transitionend", wrapperBackgroundPage);
-        wrapper.classList.add("wrapper-page");  
-        
-        function wrapperBackgroundPage() {
-            wrapper.removeEventListener("transitionend", wrapperBackgroundPage);
-            wrapperBackground.classList.add("wrapper-background-page");
+        if (button.id === "contact" || button.id === "aboutMe")
+        {
+            wrapper.addEventListener("transitionend", wrapperBackgroundPage);
+            wrapper.classList.add("wrapper-page");  
+            
+            function wrapperBackgroundPage() {
+                wrapper.removeEventListener("transitionend", wrapperBackgroundPage);
+                wrapperBackground.classList.add("wrapper-background-page");                
+            }
+
             pageMode = true;
         }
+    }
 
-        if (button.id === "contact")
-        {
-            console.log("contact");
-            contact.style.display = "flex";
-            aboutMe.style.display = "none";
-        }
+    if (button.id === "contact" && pageType != "contact")
+    {
+        pageType = "contact";
 
-        if (button.id === "aboutMe")
-        {
-            console.log("contact");
-            contact.style.display = "none";
-            aboutMe.style.display = "block";
-        }        
-    }    
+        contact.style.display = "flex";
+        aboutMe.style.display = "none";
+    }
+
+    if (button.id === "aboutMe" && pageType != "about")
+    {
+        pageType = "about";
+        
+        contact.style.display = "none";
+        aboutMe.style.display = "block";
+    }
 }
 
 function openAbout() {
