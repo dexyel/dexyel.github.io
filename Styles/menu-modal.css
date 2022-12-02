@@ -38,10 +38,17 @@
     right: 2%;
 }
 
-.menu-list li {
+.menu-list li {    
     margin-bottom: 1.5rem;
     font-size: 3rem;
     cursor: pointer;
+}
+
+.menu-indicator {
+    position: relative;
+    right: 15%;
+    color: var(--theme);
+    font-weight: bold;
 }
 
 .theme-buttons {

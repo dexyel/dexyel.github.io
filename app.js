@@ -215,6 +215,9 @@ function openPage(event) {
 
         contact.style.display = "flex";
         aboutMe.style.display = "none";
+
+        aboutMeButton.classList.remove("menu-indicator");
+        contactButton.classList.add("menu-indicator");
     }
 
     if (button.id === "aboutMe" && pageType != "about")
@@ -223,6 +226,9 @@ function openPage(event) {
         
         contact.style.display = "none";
         aboutMe.style.display = "block";
+        
+        contactButton.classList.remove("menu-indicator");
+        aboutMeButton.classList.add("menu-indicator");
     }
 }
 
@@ -233,5 +239,8 @@ function openAbout() {
 function closePage() {
     wrapperBackground.classList.remove("wrapper-background-page");
     wrapper.classList.remove("wrapper-page");
+    aboutMeButton.classList.remove("menu-indicator");
+    contactButton.classList.remove("menu-indicator");
     pageMode = false;
+    pageType = "";
 }
