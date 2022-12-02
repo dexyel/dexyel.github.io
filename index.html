@@ -43,14 +43,20 @@
                 <div class="about-me">
 
                 </div>
+
                 <div class="contact">
-                    <form action="mailto:comas.dylan@gmail.com">
-                        <input name="name" type="text" class="contact-input" placeholder="Name">
-                        <input name="mail" type="text" class="contact-input" placeholder="Email">
-                        <textarea name="text"  class="contact-input" placeholder="Message..."></textarea>
+                    <form action="https://formsubmit.co/faf7669441fb9649be5e827a9966b66c" method="POST">
+                        <input name="name" type="text" class="contact-input" placeholder="Name" required>
+                        <input name="mail" type="email" class="contact-input" placeholder="Email" required>
+                        <textarea name="text"  class="contact-input" placeholder="Message..." required></textarea>
                         <input type="submit" value="&lt;/SEND>" action>
+                        <!-- <input type="hidden" name="_next" value="https://dexyel.github.io/message-sent.html"> -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_autoresponse" value="Thank you for getting in touch! I will get back to you shortly.">
+                        <input type="hidden" name="_template" value="table">
                     </form>                    
                 </div>
+
                 <ul class="menu-list">
                     <li><a href="https://github.com/dexyel" target="tab">GitHub</a></li>
                     <li><a id="aboutMe">About Me</a></li>
@@ -76,27 +82,27 @@
         <ul class="project-list">
             <li>
                 <a class="elm-link" href="https://dexyel.github.io/Easy-List-Manager/">Easy-List-Manager</a>
-                <img src="./elm.png">
+                <img src="./Assets/elm.png">
             </li>
             <li>
                 <a href="#">Project-2</a>
-                <img src="./wip.png"><img src="./wip.png">
+                <img src="./Assets/wip.png"><img src="./wip.png">
             </li>
             <li>
                 <a href="#">Project-3</a>
-                <img src="./wip.png"><img src="./wip.png">
+                <img src="./Assets/wip.png"><img src="./wip.png">
             </li>
             <li>
                 <a href="#">Project-4</a>
-                <img src="./wip.png"><img src="./wip.png">
+                <img src="./Assets/wip.png"><img src="./wip.png">
             </li>
             <li>
                 <a href="#">Project-5</a> <!--projet basé autour du build pc ?-->
-                <img src="./wip.png"><img src="./wip.png">
+                <img src="./Assets/wip.png"><img src="./wip.png">
             </li>
         </ul>
     </div>
 
-    <script src="./app.js"></script>
+    <script src="./Scripts/app.js"></script>
 </body>
 </html>

@@ -21,3 +21,7 @@ body {
 #active {
     display: none;
 }
+
+.counter {
+    font-weight: bold;
+}
