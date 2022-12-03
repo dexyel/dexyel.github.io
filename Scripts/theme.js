@@ -14,18 +14,16 @@ greenButton.addEventListener("click", switchGreen);
 orangeButton.addEventListener("click", switchOrange);
 purpleButton.addEventListener("click", switchPurple);
 
-function setThemeColors() {
-    document.body.classList.add(activeMode);
-    
-    if (document.body.classList.contains("light-mode"))
-    {
+function setThemeColors() {console.log("ok");    
+    if (activeMode === "light-mode")
+    {console.log("light");
         blueButton.style.color = blueTheme[0];
         greenButton.style.color = greenTheme[0];
         orangeButton.style.color = orangeTheme[0];
         purpleButton.style.color = purpleTheme[0];
     }
     else
-    {
+    {console.log("dark");
         blueButton.style.color = blueTheme[1];
         greenButton.style.color = greenTheme[1];
         orangeButton.style.color = orangeTheme[1];
@@ -86,7 +84,7 @@ function switchPurple(event) {
 }
 
 function updateColor() {
-    if (document.body.classList.contains("light-mode"))
+    if (activeMode === "light-mode")
     {
         r.style.setProperty("--theme", activeTheme[0]);
     }
