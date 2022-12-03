@@ -15,6 +15,8 @@ orangeButton.addEventListener("click", switchOrange);
 purpleButton.addEventListener("click", switchPurple);
 
 function setThemeColors() {
+    document.body.classList.add(activeMode);
+    
     if (document.body.classList.contains("light-mode"))
     {
         blueButton.style.color = blueTheme[0];

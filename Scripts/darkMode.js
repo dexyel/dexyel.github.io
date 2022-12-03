@@ -11,16 +11,19 @@ function switchDarkMode(event) {
     {
         if (document.body.classList.contains("light-mode"))
         {
-            document.body.classList.remove("light-mode");
-            document.body.classList.add("dark-mode");
+            activeMode = "dark-mode";
 
+            document.body.classList.remove();
+            document.body.classList.add(activeMode);
+            
             r.style.setProperty("--background", mainColors[1]);
             r.style.setProperty("--text", mainColors[0]);
         }
         else
         {
-            document.body.classList.remove("dark-mode");
-            document.body.classList.add("light-mode");
+            activeMode = "light-mode";
+            document.body.classList.remove();
+            document.body.classList.add(activeMode);
 
             r.style.setProperty("--background", mainColors[0]);
             r.style.setProperty("--text", mainColors[1]);
