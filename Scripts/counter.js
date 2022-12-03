@@ -1,10 +1,10 @@
-const redirectMessage = document.querySelector("p[class='redirect']");
+const subtitle = document.querySelector(".subtitle");
 const counter = document.getElementById("counter");
 
-let seconds = 5;
+let seconds = 7;
 let x;
 
-redirectMessage.addEventListener("animationend", () => {
+subtitle.addEventListener("animationend", () => {
     startCounter();
 });
 
