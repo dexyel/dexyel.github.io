@@ -9,8 +9,6 @@ subtitle.addEventListener("animationend", () => {
 });
 
 function startCounter() {
-    console.log("ok");
-
     x = setInterval(() => {
         updateCounter() 
     }, 1000);
