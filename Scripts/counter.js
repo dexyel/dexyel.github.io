@@ -1,5 +1,5 @@
 const subtitle = document.querySelector(".subtitle");
-const counter = document.getElementById("counter");
+let counter = document.getElementById("counter");
 
 let seconds = 7;
 let x;
