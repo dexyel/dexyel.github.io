@@ -44,8 +44,7 @@ h1::after {
 
 .title::before {
     background: var(--background);
-    animation: typewriter 2s
-    steps(14) 1s forwards;
+    animation: typewriter 2s steps(14) 1s forwards;
 }
 
 .title::after {

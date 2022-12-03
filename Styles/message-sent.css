@@ -1,0 +1,12 @@
+#counter {
+    color: var(--theme);
+}
+
+.title::before {
+    animation: typewriter 2s
+    steps(12) 1s forwards;
+}
+
+.title::after {
+    animation: typewriter 2s steps(12) 1s forwards, blink 1s infinite;
+}

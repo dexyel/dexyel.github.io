@@ -1,12 +1,23 @@
-const seconds = 5;
+const redirectMessage = document.querySelector("p[class='redirect']");
+const counter = document.getElementById("counter");
+
+let seconds = 5;
 let x;
 
-function redirect() {
-    document.location.href = "128.0.0.1:5500";
+redirectMessage.addEventListener("animationend", () => {
+    startCounter();
+});
+
+function startCounter() {
+    console.log("ok");
+
+    x = setInterval(() => {
+        updateCounter() 
+    }, 1000);
 }
 
 function updateCounter() {
-    document.getElementById("counter").innerHTML = seconds;
+    counter.innerHTML = seconds;
     seconds--;
 
     if (seconds == -1)
@@ -16,10 +27,6 @@ function updateCounter() {
     }
 }
 
-function startCounter() {
-    x = setInterval(() => {
-        updateCounter() 
-    }, 1000);
+function redirect() {
+    document.location.href = "https://dexyel.github.io/";
 }
-
-startCounter();
