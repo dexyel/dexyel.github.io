@@ -7,12 +7,12 @@
     <title>&lt;/Dylan-Comas></title>
 
     <link rel="stylesheet" href="./Styles/general.css">
-    <link rel="stylesheet" href="./Styles/header.css">
-    <link rel="stylesheet" href="./Styles/menu-modal.css">
-    <link rel="stylesheet" href="./Styles/links-style.css">
-    <link rel="stylesheet" href="./Styles/main.css">
     <link rel="stylesheet" href="./Styles/keyframes.css">
-    <link rel="stylesheet" href="./Styles/projects-list.css">
+    <link rel="stylesheet" href="./Styles/header.css">
+    <link rel="stylesheet" href="./Styles/main.css">
+    <link rel="stylesheet" href="./Styles/radial-menu.css">
+    <link rel="stylesheet" href="./Styles/themes.css">
+    <link rel="stylesheet" href="./Styles/about.css">
     <link rel="stylesheet" href="./Styles/contact.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,93 +21,140 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body class="light-mode">
+<body>
     <header>
-        <div class="theme-button">
-            <i class="fa-solid fa-circle-half-stroke"></i>
-        </div>
-        
-        <input type="checkbox" id="active">
-        <label for="active" class="menu-button">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-
-        <div class="wrapper">
-            <div class="wrapper-background">
-                <div class="theme-buttons">
-                    <i id="blueButton" class="fa-solid fa-circle"></i>
-                    <i id="greenButton" class="fa-solid fa-circle"></i>
-                    <i id="orangeButton" class="fa-solid fa-circle"></i>
-                    <i id="purpleButton" class="fa-solid fa-circle"></i>
-                </div>
-                
-                <div class="about-me">
-
-                </div>
-
-                <div class="contact">
-                    <form action="https://formsubmit.co/faf7669441fb9649be5e827a9966b66c" method="POST">
-                        <input name="name" type="text" class="contact-input" placeholder="Name" required>
-                        <input name="mail" type="email" class="contact-input" placeholder="Email" required>
-                        <textarea name="text"  class="contact-input" placeholder="Message..." required></textarea>
-                        <input type="submit" value="&lt;/SEND>" action>
-                        <input type="hidden" name="_next" value="https://dexyel.github.io/message-sent.html">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_autoresponse" value="Thank you for getting in touch! I will get back to you shortly.">
-                        <input type="hidden" name="_template" value="table">
-                    </form>                    
-                </div>
-
-                <ul class="menu-list">
-                    <li><a href="https://github.com/dexyel" target="tab">GitHub</a></li>
-                    <li><a id="aboutMe">About Me</a></li>
-                    <li><a id="contact" href="#">Contact</a></li>
-                </ul>
-            </div>
+        <div id="header-container">
+            <button id="mode-button">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </button>
+            
+            <button id="menu-button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </header>
 
-    <div class="container">
-        <div class="typewriter">
-            <h1 class="title">&lt;/Dylan-Comas></h1>
+    <main>
+        <div id="main-container">
+            <div id="presentation-container">
+                <div class="typewriter">
+                    <h1 id="title">&lt;/Dylan-Comas&gt;</h1>
+                </div>
+                
+                <h2 id="subtitle">Welcome.</h2>
+                <p id="presentation">
+                    My name is <b>Dylan Comas</b>, I'm 29 and based in Negrepelisse, Occitanie, FR. 
+                    I've been learning <b>Web Development</b> for the past two months 
+                    and here's my <b>journey</b> so far...
+                </p>
+            </div>
+
+            <nav id="projects-container">
+                <ul id="projects-list">
+                    <li>
+                        <a class="elm-link" href="https://dexyel.github.io/Easy-List-Manager/">Easy-List-Manager</a>
+                        <img src="./Assets/elm.png">
+                    </li>
+                    <li>
+                        <a href="#">Project-2</a>
+                        <img src="./Assets/wip.png"><img>
+                    </li>
+                    <li>
+                        <a href="#">Project-3</a>
+                        <img src="./Assets/wip.png"><img>
+                    </li>
+                    <li>
+                        <a href="#">Project-4</a>
+                        <img src="./Assets/wip.png"><img>
+                    </li>
+                    <li>
+                        <a href="#">Project-5</a> <!--projet basé autour du build pc ?-->
+                        <img src="./Assets/wip.png"><img>
+                    </li>
+                </ul>
+            </nav>
         </div>
+    </main>
 
-        <h2 class="subtitle">Welcome.</h2>
-        <p class="animated-paragraph" data-splitting>
-            My name is <b>Dylan Comas</b>, I'm 29 and based in Negrepelisse, Occitanie, FR. 
-            I've been learning <b>Web Development</b> for the past two months 
-            and here's my <b>journey</b> so far...</p>
+    <div id="side-container" class="close">
+        <div id="side-background" class="close">
+            <div id="theme-buttons">
+                <button id="blue-button">
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <button id="green-button">
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <button id="orange-button">
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+                <button id="purple-button">
+                    <i class="fa-solid fa-circle"></i>
+                </button>
+            </div>
+
+            <nav id="menu-container">
+                <ul id="menu-list">
+                    <li><a href="https://github.com/dexyel" target="tab">GitHub</a></li>
+                    <li><a id="about-button" href="#">About</a></li>
+                    <li><a id="contact-button" href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div id="about-container">
+                <h2>This portfolio was made using:</h2>
+
+                <div id="brands-container">
+                    <div data-tooltip="&lt;/HTML-5>">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+                    <div data-tooltip="&lt;/CSS-3>">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                    <div data-tooltip="&lt;/Javascript>">
+                        <i class="fa-brands fa-js"></i>
+                    </div>
+                </div>
+
+                <h2>With the help of:</h2>
+
+                <div id="sites-container">
+                    <div data-tooltip="&lt;/Font-Awesome>">
+                        <i class="fa-brands fa-font-awesome"></i>
+                    </div>
+                    <div data-tooltip="&lt;/CodePen>">
+                        <i class="fa-brands fa-codepen"></i>
+                    </div>
+                    <div data-tooltip="&lt;/Stack-Overflow>">
+                        <i class="fa-brands fa-stack-overflow"></i>
+                    </div>
+                    <div data-tooltip="&lt;/Discord>">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+                    <div data-tooltip="&lt;/YouTube>">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-container">
+                <form action="https://formsubmit.co/faf7669441fb9649be5e827a9966b66c" method="POST">
+                    <input name="name" type="text" class="contact-input" placeholder="Name" required>
+                    <input name="mail" type="email" class="contact-input" placeholder="Email" required>
+                    <textarea name="text"  class="contact-input" placeholder="Message..." required></textarea>
+                    <input type="submit" value="&lt;/SEND>" action>
+                    <input type="hidden" name="_next" value="https://dexyel.github.io/message-sent.html">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Thank you for getting in touch! I will get back to you shortly.">
+                    <input type="hidden" name="_template" value="table">
+                </form>
+            </div>
+        </div>                    
     </div>
 
-    <div class="projects">
-        <ul class="project-list">
-            <li>
-                <a class="elm-link" href="https://dexyel.github.io/Easy-List-Manager/">Easy-List-Manager</a>
-                <img src="./Assets/elm.png">
-            </li>
-            <li>
-                <a href="#">Project-2</a>
-                <img src="./Assets/wip.png"><img>
-            </li>
-            <li>
-                <a href="#">Project-3</a>
-                <img src="./Assets/wip.png"><img>
-            </li>
-            <li>
-                <a href="#">Project-4</a>
-                <img src="./Assets/wip.png"><img>
-            </li>
-            <li>
-                <a href="#">Project-5</a> <!--projet basé autour du build pc ?-->
-                <img src="./Assets/wip.png"><img>
-            </li>
-        </ul>
-    </div>
-
-    <script src="./Scripts/main.js"></script>
-    <script src="./Scripts/theme.js"></script>
-    <script src="./Scripts/darkMode.js"></script>
-    <script src="./Scripts/menu.js"></script>
-    <script src="./Scripts/pageMode.js"></script>
+<script src="./Scripts/darkMode.js"></script>
+<script src="./Scripts/radialMenu.js"></script>
+<script src="./Scripts/themes.js"></script>
+    
 </body>
 </html>

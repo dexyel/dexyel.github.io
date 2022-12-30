@@ -1,31 +1,61 @@
-const darkModeButton = document.querySelector(".fa-circle-half-stroke");
+const modeButton = document.getElementById('mode-button');
 
-darkModeButton.addEventListener("click", switchDarkMode);
+let activeMode = "dark-mode";
 
-function switchDarkMode(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    
+    loadMode();
+});
 
-    let button = event.target;
+modeButton.addEventListener('click', function() {    
+    switchMode();
+    setModeColors();
+    updateTheme();
+});
 
-    if (button.classList.contains("fa-circle-half-stroke")) 
+function updateMode() {
+    document.body.classList.add(activeMode);
+
+    if (activeMode == "dark-mode") 
     {
-        if (activeMode === "light-mode")
-        {
-            activeMode = "dark-mode";
-
-            r.style.setProperty("--background", mainColors[1]);
-            r.style.setProperty("--text", mainColors[0]);
-        }
-        else
-        {
-            activeMode = "light-mode";
-
-            r.style.setProperty("--background", mainColors[0]);
-            r.style.setProperty("--text", mainColors[1]);
-        }
-
-        updateColor();
+        document.body.classList.remove("light-mode");
+    }
+    else
+    {
+        document.body.classList.remove("dark-mode");
     }
 
-    setThemeColors();
+    saveMode();    
+}
+
+function switchMode() {
+    if (activeMode == "dark-mode")
+    {
+        activeMode = "light-mode";
+    }
+    else
+    {
+        activeMode = "dark-mode";
+    }
+
+    updateMode();
+}
+
+function saveMode() {
+    localStorage.setItem('mode', activeMode);
+}
+
+function loadMode() {
+    var savedMode = localStorage.getItem('mode');
+
+    if (savedMode) 
+    {
+        activeMode = savedMode;
+        updateMode();
+    }
+    else
+    {
+        activeMode = "dark-mode";
+        updateMode();    
+    }    
 }

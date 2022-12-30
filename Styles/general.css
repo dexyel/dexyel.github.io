@@ -1,7 +1,18 @@
 :root {
-    --background: #F2F2F2;
-    --text: #0D0D0D;
-    --theme: #2477db;
+    --background: 242, 242, 242;
+    --color: 13, 13, 13;
+    --theme: 48, 132, 242;
+    --title-size: 3rem;
+}
+
+.dark-mode {
+    --background: 13, 13, 13;
+    --color: 242, 242, 242;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
@@ -10,18 +21,49 @@ html, body {
 }
 
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Cutive Mono', monospace;
-    background: var(--background);
+    background: rgb(var(--background));
     overflow: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
     transition: background 0.5s ease;
 }
 
-#active {
-    display: none;
+h1 { font-size: var(--title-size); }
+h2 { font-size: 2rem; }
+p { font-size: 1.5rem; }
+
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+    color: rgb(var(--color));
+    transition: color 0.3s ease-in-out;
 }
 
-.counter {
-    font-weight: bold;
+a {
+    text-decoration: none;
+    color: rgb(var(--color));
+    line-height: 2;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+a::before {
+    content: "</";
+}
+
+a::after {
+    content: ">";
+}
+
+a::before,
+a::after {
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover::before,
+a:hover::after {
+    color: rgb(var(--theme));
 }

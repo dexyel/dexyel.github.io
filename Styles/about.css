@@ -1,0 +1,72 @@
+#about-container {
+    /*👉visibility: hidden;👈*/
+    position: absolute;
+    left: 12%;
+    top: 47%;
+    transform: translateY(-50%);
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: 4rem 5rem 4rem 5rem;
+    row-gap: 20px;    
+}
+
+#brands-container,
+#sites-container {
+    display: flex;
+}
+
+.fa-brands {
+    color: rgb(var(--theme));
+    font-size: 4rem;
+    margin-right: 2rem;
+    box-sizing: border-box;
+    transition: color 0.3s ease-in-out;
+}
+
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: help;    
+}
+
+[data-tooltip]:before,
+[data-tooltip]:after {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+}
+
+[data-tooltip]:before {
+    position: absolute;
+    bottom: 110%;
+    left: 30%;
+    transform: translateX(-50%);
+    padding: 0.5rem;
+    width: max-content;
+    background-color: rgba(var(--theme), 0.5);
+    color: rgb(var(--text));
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+}
+
+[data-tooltip]:after {
+    position: absolute;
+    bottom: 103%;
+    left: 30%;
+    transform: translateX(-50%);
+    width: 0;
+    border-top: 5px solid rgba(var(--theme), 0.5);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+}
+
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+    visibility: visible;
+    opacity: 1;
+}

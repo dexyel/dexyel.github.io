@@ -1,0 +1,32 @@
+#theme-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 4.5rem;
+    bottom: calc(100% - 4.5rem);
+    display: flex;
+    justify-content: right;
+}
+
+#theme-buttons button {
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+}
+
+.fa-circle {
+    border: solid 4px transparent;
+    border-radius: 50%;   
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
+    padding: 4px;
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+#theme-buttons button:hover > .fa-circle {
+    border: solid 4px currentColor;
+}
+
+#theme-buttons button:active > .fa-circle {
+    filter: opacity(80%);
+}

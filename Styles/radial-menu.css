@@ -1,0 +1,74 @@
+#side-container,
+#side-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#side-container {
+    background: rgb(var(--theme));
+    clip-path: circle(0% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+#side-container.close {
+    clip-path: circle(0% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+#side-container.open {
+    clip-path: circle(70% at calc(100% - 1.7vw) 3.9vh); /*70*/
+    transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+}
+
+#side-container.extend {
+    clip-path: circle(130% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+}
+
+#side-background {
+    background: rgb(var(--background));
+}
+
+#side-background.close {
+    clip-path: circle(0% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out;
+}
+
+#side-background.open {
+    clip-path: circle(65% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out 0.4s, background 0.5s ease;
+}
+
+#side-background.extend {
+    clip-path: circle(125% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+}
+
+#side-background.retract {
+    clip-path: circle(60% at calc(100% - 1.7vw) 3.9vh);
+    transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+}
+
+#menu-container {
+    height: fit-content;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 2vw;
+}
+
+#menu-list {
+    list-style: none;    
+}
+
+#menu-list li {
+    font-size: 2rem;
+}
+
+#about-container,
+#contact-container {
+    visibility: hidden;
+}

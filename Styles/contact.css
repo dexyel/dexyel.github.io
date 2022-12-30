@@ -1,54 +1,49 @@
-.contact {
+#contact-container {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 420px;
+    max-width: 400px;
     margin: 50px auto; 
     position: fixed;
-    top: 40%;
-    left: 38%;
+    top: 42%;
+    left: 29%;
     transform: translate(-50%, -50%);
-}
-
-.contact h1 {
-    position: relative;
-    top: 0;
-    left: 34%;
-    transform: translateX(-50%);
-    margin-bottom: 4rem;
 }
 
 .contact-input {
     font-size: 1.2rem;
     line-height: 20px;
     background: transparent;
-    border: solid 2px var(--text);
+    border: solid 2px rgb(var(--color));
     outline: 0;
     padding: 1rem;
     margin-bottom: 1rem;
-    width: 400px;
-    color: var(--text);
+    width: 600px;
+    color: rgb(var(--color));
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .contact-input:focus {
-    border: solid 2px var(--theme);
+    border: solid 2px rgb(var(--theme));
 }
 
 textarea {
-    height: 150px;
+    height: 70px;
     line-height: 150%;
     resize:vertical;
 }
 
 [type="submit"] {
-    background: var(--theme);
-    color: var(--background);
+    background: rgb(var(--theme));
+    color: rgb(var(--background));
     width: 100%;
     font-size: 1.5rem;
     padding: 15px 0;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease-in-out, background 0.5s ease-in-out, opacity 0.3s ease;
 }
 
 [type="submit"]:hover {

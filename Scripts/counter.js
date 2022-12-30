@@ -1,10 +1,10 @@
-const subtitle = document.querySelector(".subtitle");
+const subtitle = document.getElementById("subtitle");
 let counter = document.getElementById("counter");
 
-let seconds = 7;
+let seconds = 5;
 let x;
 
-subtitle.addEventListener("animationend", () => {
+subtitle.addEventListener("animationstart", () => {
     startCounter();
 });
 

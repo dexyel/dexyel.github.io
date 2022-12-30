@@ -1,35 +1,24 @@
-@keyframes typewriter {
-    to { left: 100% }
+@keyframes typewriter { from { width: 0%; } }
+@keyframes blink-caret { 
+    0% { border-color: rgb(var(--theme)); }
+    49% { border-color: rgb(var(--theme)); }
+    50% { border-color: transparent; } 
+    100% { border-color: transparent; }
 }
 
-@keyframes blink {
-    0% { opacity: 1; }
-    49% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 0; }
-}
-
-@keyframes fadeInLeft {
-    to {
+@keyframes fadeFromLeft {
+    to { 
         opacity: 1;
-        transform: translateX(0.5rem);
-    }
-}
-
-@keyframes fadeInRight {
-    to {
-        opacity: 0.2;
-        transform: translate(0, -50%);
+        transform: translateX(0.1rem)
     }
 }
 
 @keyframes fadeIn {
-    to {
-      opacity: 1;
-      pointer-events: all;
+    to { 
+        opacity: 1;
+        pointer-events: auto;
     }
 }
 
-@keyframes extandCircle {
-    to { clip-path: circle(77% at calc(100% - 2.7rem) 2.8rem); }
-}
+@keyframes bottomLayerMenu { to { clip-path: circle(70% at calc(100% - 1.7vw) 3.9vh); } }
+@keyframes topLayerMenu { to { clip-path: circle(65% at calc(100% - 1.7vw) 3.9vh); } }
