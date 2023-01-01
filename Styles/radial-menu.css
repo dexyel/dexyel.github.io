@@ -68,7 +68,49 @@
     font-size: 2rem;
 }
 
-#about-container,
-#contact-container {
-    visibility: hidden;
+@media screen and (max-width: 1000px) {
+    #menu-container {
+        top: 35%;
+    }
+
+    #side-container.open {
+        clip-path: circle(60% at calc(100% - 1.7vw) 3.9vh); /*70*/
+        transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+    }
+
+    #side-background.open {
+        clip-path: circle(55% at calc(100% - 1.7vw) 3.9vh);
+        transition: clip-path 0.3s ease-in-out 0.4s, background 0.5s ease;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #menu-container {
+        top: 25%;
+        right: 5%;
+    }
+
+    #menu-list li {
+        font-size: 1.25rem;
+    }
+
+    #side-container.open {
+        clip-path: circle(60% at calc(100% - 1.7vw) 3.9vh); /*70*/
+        transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+    }
+
+    #side-background.open {
+        clip-path: circle(53% at calc(100% - 1.7vw) 3.9vh);
+        transition: clip-path 0.3s ease-in-out 0.4s, background 0.5s ease;
+    }
+
+    #side-background.extend {
+        clip-path: circle(113% at calc(100% - 1.7vw) 3.9vh);
+        transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+    }
+    
+    #side-background.retract {
+        clip-path: circle(0% at calc(100% - 1.7vw) 3.9vh);
+        transition: clip-path 0.3s ease-in-out, background 0.5s ease;
+    }
 }

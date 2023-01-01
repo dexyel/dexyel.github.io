@@ -67,3 +67,9 @@ a:hover::before,
 a:hover::after {
     color: rgb(var(--theme));
 }
+
+@media screen and (max-width: 500px) {
+    h1 { font-size: calc(var(--title-size) - 1rem); }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
+}

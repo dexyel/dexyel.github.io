@@ -43,6 +43,8 @@ function openMenu() {
             side.classList.remove('extend');
             side.classList.add('close');
             pageType = "";
+            contactContainer.style.visibility = "hidden";
+            aboutContainer.style.visibility = "hidden";   
         }, 400)
     }
 }

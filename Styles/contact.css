@@ -53,3 +53,43 @@ textarea {
 .about-me {
     display: block;
 }
+
+@media screen and (max-width: 1440px) {
+    .contact-input {
+        font-size: 1rem;
+        line-height: 10px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        max-width: 400px;
+    }
+
+    [type="submit"] {       
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #contact-container {
+        left: 35%;
+    }
+
+    .contact-input {
+        font-size: 1rem;
+        line-height: 10px;
+        padding: 0.5rem;
+        margin-bottom: 0.5rem;
+        width: 200px;
+    }
+
+    textarea {
+        height: 50px;
+    }
+
+    [type="submit"] {
+       
+        width: 74%;
+        font-size: 1rem;
+        padding: 5px 0;
+    }
+}
