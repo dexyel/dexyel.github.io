@@ -19,7 +19,7 @@
 #title {   
     display: inline-block;
     border-right: 0.1em solid rgb(var(--color));
-    width: 59%;
+    width: 58.5%;
     white-space: nowrap;
     overflow: hidden;     
     animation: typewriter 4s steps(14), blink-caret 0.5s step-end infinite alternate;
