@@ -22,7 +22,7 @@
     width: 58.5%;
     white-space: nowrap;
     overflow: hidden;     
-    animation: typewriter 4s steps(14), blink-caret 0.5s step-end infinite alternate;
+    animation: typewriter 2s steps(14), blink-caret 0.5s step-end infinite alternate;
 }
 
 #subtitle {         
@@ -30,13 +30,13 @@
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateX(-2rem);
-    animation: fadeFromLeft 2s linear 5s forwards;
+    animation: fadeFromLeft 1s linear 3s forwards;
 }
 
 #presentation {
     opacity: 0;
     transform: translateX(-1rem);
-    animation: fadeFromLeft 2s linear 5.5s forwards;
+    animation: fadeFromLeft 1s linear 3.5s forwards;
 }
 
 /* PROJECTS */
