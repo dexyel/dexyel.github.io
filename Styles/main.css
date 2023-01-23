@@ -19,10 +19,10 @@
 #title {   
     display: inline-block;
     border-right: 0.1em solid rgb(var(--color));
-    width: 58.35%;
+    width: 43.7vh;
     white-space: nowrap;
     overflow: hidden;     
-    animation: typewriter 2s steps(14), blink-caret 0.5s step-end infinite alternate;
+    animation: typewriter 4s steps(14), blink-caret 0.5s step-end infinite alternate;
 }
 
 #subtitle {         
@@ -30,13 +30,13 @@
     margin-bottom: 2rem;
     opacity: 0;
     transform: translateX(-2rem);
-    animation: fadeFromLeft 1s linear 3s forwards;
+    animation: fadeFromLeft 1s linear 5s forwards;
 }
 
 #presentation {
     opacity: 0;
     transform: translateX(-1rem);
-    animation: fadeFromLeft 1s linear 3.5s forwards;
+    animation: fadeFromLeft 1s linear 5.5s forwards;
 }
 
 /* PROJECTS */
@@ -77,56 +77,62 @@
     right: 0;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 2560px) {
     #title {
-        width: 70%;
+        width: 33.25vh;
     }
 }
 
-@media screen and (max-width: 900px) {
-    #presentation-container {
-        width: 100%;
-        top: 20%;
-        transform: translateY(0);
-        left: 2vh;
-        right: 0;
-        margin: 0 auto;
-    }
-
+@media screen and (max-width: 1920px) {
     #title {
-        width: 45.5%;
-    }
-
-    #projects-container {
-        position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translateY(-50%, -50%);        
-        margin: 0 auto;
+        width: 47.75vh;
     }
 }
 
-@media screen and (max-width: 460px) {
-    #presentation-container {
-        width: 75%;
-        left: -10%;
-    }
+@media screen and (max-width: 1024px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.5rem; }
+    p { font-size: 1rem; }
 
     #title {
-        width: 79%;
+        width: 39.85vh;
     }
 
-    #projects-container {
-        top: 75%;
-        left: 8%;
+    #presentation-container {
+        width: 50%;
     }
 
     #projects-list li {
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
 
     #projects-list img {
-        width: 500px;
-        top: -125%;        
+        width: 700px;
+        top: -25%;
+        right: -400%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #title {
+        width: 33.25vh;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #title {
+        width: 33.25vh;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #title {
+        width: 33.25vh;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #title {
+        width: 33.25vh;
     }
 }

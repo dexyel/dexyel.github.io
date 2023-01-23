@@ -2,7 +2,6 @@
     --background: 242, 242, 242;
     --color: 13, 13, 13;
     --theme: 48, 132, 242;
-    --title-size: 3rem;
 }
 
 .dark-mode {
@@ -29,7 +28,7 @@ body {
     transition: background 0.5s ease;
 }
 
-h1 { font-size: var(--title-size); }
+h1 { font-size: 3rem }
 h2 { font-size: 2rem; }
 p { font-size: 1.5rem; }
 
